@@ -10,6 +10,10 @@ public class SteamUaLoginPageHelper extends SteamUaLoginPageElements{
         getClickOnLoginInput().sendKeys("anyashyta");
         return this;
     }
+    public SteamUaLoginPageHelper writeValidEmail() {
+        getClickOnLoginInput().sendKeys("ed27nast@gmail.com");
+        return this;
+    }
 
     public SteamUaLoginPageHelper writeValidPassword() {
         getClickOnPasswordInput().sendKeys("eduard27072002");

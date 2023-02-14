@@ -2,13 +2,15 @@ package tests;
 
 import base.AbstractBaseTest;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
 
-public class SteamLoginPositiveTest extends AbstractBaseTest {
+public class SteamNegativeEmailLoginTest extends AbstractBaseTest {
+
     @Test
-    public void positiveLoginTest() {
+    public void negativeEmailLoginTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
 
@@ -18,8 +20,7 @@ public class SteamLoginPositiveTest extends AbstractBaseTest {
         steamUaLoginPageHelper.writeValidPassword();
         steamUaLoginPageHelper.clickOnLoginButton();
 
-        String expectedURL = "https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header";
-        String actualURL = driver.getCurrentUrl();
-        Assert.assertEquals(actualURL, expectedURL, "The required page don`t open");
+        Assert.assertTrue(steamUaLoginPageHelper.getPopupNotification().isDisplayed(), "Pop-up notification isn`t visible");
+        
     }
 }
