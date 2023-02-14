@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="LoginTests" verbose="1" >
+
+    <test name="PositiveTests" >
+        <groups>
+            <run>
+                <include name="positiveLoginTests"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.SteamLoginPositiveTest" />
+        </classes>
+    </test>
+</suite>
