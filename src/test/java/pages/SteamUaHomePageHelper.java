@@ -10,4 +10,10 @@ public class SteamUaHomePageHelper extends SteamUaHomePageElements{
         getOpenLoginWindow().click();
         return this;
     }
+
+    public SteamUaHomePageHelper moveCursorToCategoryAction() {
+        moveCursor(getMoveCursorToCategory());
+        getClickCategoryToAction().click();
+        return this;
+    }
 }
