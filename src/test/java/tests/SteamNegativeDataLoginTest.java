@@ -1,7 +1,6 @@
 package tests;
 
 import base.AbstractBaseTest;
-import org.assertj.core.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
@@ -19,6 +18,6 @@ public class SteamNegativeDataLoginTest extends AbstractBaseTest {
         steamUaLoginPageHelper.makeLogin(username, password);
         steamUaLoginPageHelper.clickOnLoginButton();
 
-        Assert.assertTrue(steamUaLoginPageHelper.getPopupNotification().isDisplayed(), "Pop-up notification isn`t visible");
+        Assert.assertTrue(steamUaLoginPageHelper.getErrorMessage().isDisplayed());
     }
 }

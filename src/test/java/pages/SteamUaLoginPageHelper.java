@@ -30,4 +30,27 @@ public class SteamUaLoginPageHelper extends SteamUaLoginPageElements{
         getClickOnPasswordInput().sendKeys(password);
         return this;
     }
+    private String loginColor;
+    public void setLoginColor(){
+        this.loginColor = getErrorLoginInput().getCssValue("border-color");
+    }
+    public String getLoginColor(){
+        return loginColor;
+    }
+    private String passwordColor;
+    public void setPasswordColor(){
+        this.passwordColor = getErrorPasswordInput().getCssValue("border-color");
+    }
+    public String getPasswordColor(){
+        return passwordColor;
+    }
+
+    private String errorMessageColor;
+    public void setErrorMessageColor(){
+        this.errorMessageColor = getErrorMessage().getCssValue("border-color");
+    }
+    public String getErrorMessageColor(){
+        return errorMessageColor;
+    }
+
 }

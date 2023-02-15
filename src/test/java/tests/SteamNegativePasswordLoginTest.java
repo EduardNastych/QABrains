@@ -7,6 +7,8 @@ import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
 import utils.DataProviderSteamNegativePasswordLoginTest;
 
+import static utils.Constants.LOGIN_INPUTS_BORDER_LINE_COLOR;
+
 public class SteamNegativePasswordLoginTest extends AbstractBaseTest {
     @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativePasswordLoginTest.class)
     public void negativeLoginTestWithInvalidLogin(String username, String password) {
@@ -17,7 +19,7 @@ public class SteamNegativePasswordLoginTest extends AbstractBaseTest {
         steamUaHomePageHelper.openLoginWindow();
         steamUaLoginPageHelper.makeLogin(username, password);
         steamUaLoginPageHelper.clickOnLoginButton();
+        steamUaLoginPageHelper.setPasswordColor();
 
-        Assert.assertTrue(steamUaLoginPageHelper.getPopupNotification().isDisplayed(), "Pop-up notification isn`t visible");
-    }
+        Assert.assertEquals(LOGIN_INPUTS_BORDER_LINE_COLOR, steamUaLoginPageHelper.getPasswordColor());    }
 }
