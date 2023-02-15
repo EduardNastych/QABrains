@@ -24,4 +24,10 @@ public class SteamUaLoginPageHelper extends SteamUaLoginPageElements{
         getClickOnLoginButton().click();
         return this;
     }
+
+    public SteamUaLoginPageHelper makeLogin(String username, String password){
+        getClickOnLoginInput().sendKeys(username);
+        getClickOnPasswordInput().sendKeys(password);
+        return this;
+    }
 }
