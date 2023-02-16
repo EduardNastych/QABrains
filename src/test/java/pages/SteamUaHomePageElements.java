@@ -14,6 +14,8 @@ public class SteamUaHomePageElements extends AbstractBasePage {
 
     private final static String BUTTON_ACTION_CATEGORY = "//a[contains(text(), 'Бойовики')]";
 
+    private final static String BUTTON_NEWS_BAR_MENU = "(//a[@class='tab  '])[2]";
+
     public WebElement getOpenLoginWindow() {
         return waitUntilVisibilityOfElementLocated(HEADER_LOGIN_BUTTON);
     }
@@ -26,5 +28,12 @@ public class SteamUaHomePageElements extends AbstractBasePage {
         return waitUntilVisibilityOfElementLocated(BUTTON_ACTION_CATEGORY);
     }
 
+    public WebElement getMoveCursorToNewsBarMenu() {
+        return waitUntilVisibilityOfElementLocated(BUTTON_NEWS_BAR_MENU);
+    }
+
+    public WebElement getClickNewsBarMenu() {
+        return waitUntilVisibilityOfElementLocated(BUTTON_NEWS_BAR_MENU);
+    }
 }
 
