@@ -1,8 +1,10 @@
-package pages;
+package tests;
 
 import base.AbstractBaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.SteamUaHomePageHelper;
+import pages.SteamUaRegistrationPageHelper;
 
 public class SteamNegativeIAgreeCheckMarkRegistrationTest extends AbstractBaseTest {
     @Test
