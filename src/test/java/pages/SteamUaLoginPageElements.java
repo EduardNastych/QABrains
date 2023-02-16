@@ -13,7 +13,8 @@ public class SteamUaLoginPageElements extends AbstractBasePage {
     private final static String PASSWORD_INPUT = "//input[@type='password']";
     private final static String ERROR_PASSWORD_INPUT = "(//input[@class='newlogindialog_TextInput_2eKVn newlogindialog_Danger_1-HwJ'])[2]";
     private final static String LOGIN_BUTTON = "//button[text()='Увійти']";
-    public final static String ERROR_MESSAGE = "//div[text()='Будь ласка, перевірте логін і пароль свого акаунта, а потім спробуйте знову.']";
+    private final static String ERROR_MESSAGE = "//div[text()='Будь ласка, перевірте логін і пароль свого акаунта, а потім спробуйте знову.']";
+    private static final String REMEMBER_ME_CHECK_BOX = "//div[@class='newlogindialog_Checkbox_3tTFg']";
 
     public WebElement getClickOnLoginInput() {
         return waitUntilElementToBeClickable(LOGIN_INPUT);
@@ -35,5 +36,6 @@ public class SteamUaLoginPageElements extends AbstractBasePage {
     public WebElement getErrorPasswordInput(){
         return waitUntilVisibilityOfElementLocated(ERROR_PASSWORD_INPUT);
     }
+    public WebElement getRememberMeCheckBox() { return waitUntilElementToBeClickable(REMEMBER_ME_CHECK_BOX);}
 
 }
