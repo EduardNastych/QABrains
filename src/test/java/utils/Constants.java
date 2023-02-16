@@ -37,7 +37,13 @@ public class Constants {
     public static final String GIFT_CARD_LINK_BUTTON = "//a[contains(text(),'Подарункові картки')]";
     public static final String FACEBOOK_LINK_BUTTON = "//a[@href='https://steamcommunity.com/linkfilter/?url=http://www.facebook.com/Steam']";
     public static final String TWITTER_LINK_BUTTON = "//a[@href='http://twitter.com/steam']";
-
+    public static final String LOGIN_INPUT = "(//input[@class='newlogindialog_TextInput_2eKVn'])[1]";
+    public static final String PASSWORD_INPUT = "//input[@type='password']";
+    public static final String REMEMBER_ME_CHECK_BOX = "//div[@class='newlogindialog_Checkbox_3tTFg']";
+    public final static String LOGIN_BUTTON = "//button[text()='Увійти']";
+    public final static String HELP_I_CANT_SIGN_IN_LINK_BUTTON = "//a[contains(text(),'Help, I can')]";
+    public final static String STEAM_MOBILE_APP_LINK_BUTTON = "//a[contains(text(),'Steam Mobile App')]";
+    public final static String POP_UP_NOTIFICATION = "//div[contains(text(), 'Під час наступного запуску Steam вам не потрібно буде вводити пароль чи підтверджувати вхід до акаунта.')]";
 
 
 

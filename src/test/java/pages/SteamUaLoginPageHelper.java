@@ -30,6 +30,10 @@ public class SteamUaLoginPageHelper extends SteamUaLoginPageElements{
         getClickOnPasswordInput().sendKeys(password);
         return this;
     }
+    public SteamUaLoginPageHelper moveToRememberMeCheckBox(){
+        moveCursor(getRememberMeCheckBox());
+        return this;
+    }
     private String loginColor;
     public void setLoginColor(){
         this.loginColor = getErrorLoginInput().getCssValue("border-color");
