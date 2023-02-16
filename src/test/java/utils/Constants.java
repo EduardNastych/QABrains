@@ -23,6 +23,21 @@ public class Constants {
     public static final String INSTALL_STEAM_BUTTON = "//a[contains(text(),'Інсталювати Steam')]";
     public static final String LOGIN_LINK_BUTTON = "//a[contains(text(),'увійти')]";
     public static final String LANGUAGE_PULL_DOWN_LINK = "//span[contains(text(),'мова')]";
+    public static final String VALVE_LOGO_ICON = "(//img[@alt='Valve Software'])[1]";
+    public static final String PRIVATE_POLICY_LINK_BUTTON = "(//a[contains(text(),'Політика конфіденційності')])[1]";
+    public static final String LEGAL_LINK_BUTTON = "(//a[contains(text(),'Юридична інформація')])[1]";
+    public static final String STEAM_SUBSCRIBER_AGREEMENT_LINK_BUTTON = "(//a[contains(text(),'Угода підписника Steam')])[1]";
+    public static final String REFUSE_LINK_BUTTON = "(//a[contains(text(),'Повернення грошей')])[1]";
+    public static final String COOKIES_LINK_BUTTON = "(//a[contains(text(),'Файли cookie')])[1]";
+    public static final String ABOUT_VALVE_LINK_BUTTON = "//a[contains(text(),'Про Valve')]";
+    public static final String JOBS_LINK_BUTTON = "//a[contains(text(),'Вакансії')]";
+    public static final String STEAMWORKS_LINK_BUTTON = "//a[contains(text(),'Steamworks')]";
+    public static final String STEAM_DISTRIBUTION_LINK_BUTTON = "//a[contains(text(),'Видання у Steam')]";
+    public static final String SUPPORT_LINK_BUTTON = "(//a[contains(text(),'Підтримка')])[2]";
+    public static final String GIFT_CARD_LINK_BUTTON = "//a[contains(text(),'Подарункові картки')]";
+    public static final String FACEBOOK_LINK_BUTTON = "//a[@href='https://steamcommunity.com/linkfilter/?url=http://www.facebook.com/Steam']";
+    public static final String TWITTER_LINK_BUTTON = "//a[@href='http://twitter.com/steam']";
+
 
 
 
