@@ -16,4 +16,10 @@ public class SteamUaHomePageHelper extends SteamUaHomePageElements{
         getClickCategoryToAction().click();
         return this;
     }
+
+    public SteamUaHomePageHelper moveCursorToNewsBarMenu() {
+        moveCursor(getMoveCursorToNewsBarMenu());
+        getClickNewsBarMenu().click();
+        return this;
+    }
 }
