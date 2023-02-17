@@ -5,12 +5,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
-import utils.DataProviderSteamNegativeUsernameLoginTest;
+import utils.DataProviderSteamNegativeUsernameLogin;
 
 import static utils.Constants.ERROR_MESSAGE_COLOR;
 
 public class SteamNegativeUsernameLoginTest extends AbstractBaseTest {
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeUsernameLoginTest.class)
+    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeUsernameLogin.class)
     public void negativeLoginTestWithInvalidLogin(String username, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

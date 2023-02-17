@@ -8,6 +8,7 @@ public class SteamUaHomePageElements extends AbstractBasePage {
     public SteamUaHomePageElements(WebDriver driver) {
         super(driver);
     }
+
     private final static String HEADER_LOGIN_BUTTON = "//a[text()='увійти']";
 
     private final static String PULLWOWN_DESKTOP_CATEGORY = "(//a[text()='Категорії'])[1]";

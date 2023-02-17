@@ -2,7 +2,7 @@ package utils;
 
 import org.testng.annotations.DataProvider;
 
-public class DataProviderSteamNegativePasswordLoginTest {
+public class DataProviderSteamNegativePasswordLogin {
     private final static String USERNAME = "anyashyta";
     private final static String PASSWORD = "27072002";
 
