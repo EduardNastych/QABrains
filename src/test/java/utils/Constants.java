@@ -50,7 +50,7 @@ public class Constants {
     public final static String NOT_RECEIVE_CODE_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?reset=2&issueid=409";
     public final static String HELP_ERROR_MESSAGE_BORDER_LINE_COLOR = "rgb(129, 0, 0)";
     public final static String LOST_AUTHENTICATOR_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?lost=8&issueid=402";
-
+    public final static String APP_STORE_STEAM_PAGE_URL = "https://apps.apple.com/app/steam-chat/id1434890245?t=1";
 
 
 }
