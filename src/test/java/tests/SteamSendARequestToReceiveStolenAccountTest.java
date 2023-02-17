@@ -28,6 +28,6 @@ public class SteamSendARequestToReceiveStolenAccountTest extends AbstractBaseTes
         steamUaHelpWithLoginInfoPageHelper.setCaptchaColor();
 
         Assertions.assertThat(getUrl()).isEqualTo(RECEIVE_STOLEN_ACCOUNT_PAGE_URL);
-        Assert.assertEquals(CAPTCHA_ERROR_MESSAGE_BORDER_LINE_COLOR, steamUaHelpWithLoginInfoPageHelper.getCaptchaColor(), "Doesn`t match");
+        Assert.assertEquals(CAPTCHA_ERROR_MESSAGE_BORDER_LINE_COLOR, steamUaHelpWithLoginInfoPageHelper.getCaptchaColor());
     }
 }
