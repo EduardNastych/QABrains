@@ -2,17 +2,16 @@ package tests;
 
 import base.AbstractBaseTest;
 import org.assertj.core.api.Assertions;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
 import pages.SteamUaMobilePageHelper;
 
-import static utils.Constants.APP_STORE_STEAM_PAGE_URL;
+import static utils.Constants.*;
 
-public class SteamOpenAppStoreSteamPageTest extends AbstractBaseTest {
+public class SteamAddAPhoneNumberToYourSteamAccountTest extends AbstractBaseTest {
     @Test
-    public void openAppStoreSteamPageTest(){
+    public void addAPhoneNumberToYourSteamAccountTest(){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
         SteamUaMobilePageHelper steamUaMobilePageHelper = new SteamUaMobilePageHelper(driver);
@@ -20,8 +19,9 @@ public class SteamOpenAppStoreSteamPageTest extends AbstractBaseTest {
         openUrl("https://store.steampowered.com/");
         steamUaHomePageHelper.openLoginWindow();
         steamUaLoginPageHelper.clickOnSteamMobileAppLinkButton();
-        steamUaMobilePageHelper.clickOnAppStoreLogo();
+        steamUaMobilePageHelper.clickOnAddNumberButtonLink();
+        steamUaLoginPageHelper.clickOnLoginButton();
 
-        Assertions.assertThat(getUrl()).isNotEqualTo(APP_STORE_STEAM_PAGE_URL);
+        Assertions.assertThat(getUrl()).isEqualTo(ADD_NUMBER_URl);
     }
 }
