@@ -44,6 +44,13 @@ public class Constants {
     public final static String HELP_I_CANT_SIGN_IN_LINK_BUTTON = "//a[contains(text(),'Help, I can')]";
     public final static String STEAM_MOBILE_APP_LINK_BUTTON = "//a[contains(text(),'Steam Mobile App')]";
     public final static String POP_UP_NOTIFICATION = "//div[contains(text(), 'Під час наступного запуску Steam вам не потрібно буде вводити пароль чи підтверджувати вхід до акаунта.')]";
-    public final static String HELP_WITH_LOGIN_INFO_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?issueid=406";
+    public final static String FORGOT_LOGIN_DATA_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?issueid=406";
+    public final static String CAPTCHA_ERROR_MESSAGE_BORDER_LINE_COLOR = "rgb(129, 0, 0)";
+    public final static String RECEIVE_STOLEN_ACCOUNT_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?reset=1&issueid=408";
+    public final static String NOT_RECEIVE_CODE_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?reset=2&issueid=409";
+    public final static String HELP_ERROR_MESSAGE_BORDER_LINE_COLOR = "rgb(129, 0, 0)";
+    public final static String LOST_AUTHENTICATOR_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?lost=8&issueid=402";
+
+
 
 }

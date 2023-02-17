@@ -14,4 +14,22 @@ public class SteamUaHelpWithLoginInfoPageHelper extends SteamUaHelpWithLoginInfo
         getClickOnSearchButton().click();
         return this;
     }
+    private String captchaColor;
+
+    public void setCaptchaColor() {
+        this.captchaColor = getCaptchaErrorMessage().getCssValue("border-color");
+    }
+
+    public String getCaptchaColor() {
+        return captchaColor;
+    }
+    private String messageColor;
+
+    public void setMessageColor() {
+        this.messageColor = getHelpErrorMessage().getCssValue("border-color");
+    }
+
+    public String getMessageColor() {
+        return messageColor;
+    }
 }
