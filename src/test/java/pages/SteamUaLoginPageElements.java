@@ -16,6 +16,7 @@ public class SteamUaLoginPageElements extends AbstractBasePage {
     private final static String LOGIN_BUTTON = "//button[text()='Увійти']";
     private final static String ERROR_MESSAGE = "//div[text()='Будь ласка, перевірте логін і пароль свого акаунта, а потім спробуйте знову.']";
     private static final String REMEMBER_ME_CHECK_BOX = "//div[@class='newlogindialog_Checkbox_3tTFg']";
+    private final static String HELP_I_CANT_SIGN_IN_LINK_BUTTON = "//a[text()='Я не можу ввійти']";
 
     public WebElement getClickOnLoginInput() {
         return waitUntilElementToBeClickable(LOGIN_INPUT);
@@ -43,5 +44,8 @@ public class SteamUaLoginPageElements extends AbstractBasePage {
 
     public WebElement getRememberMeCheckBox() {
         return waitUntilElementToBeClickable(REMEMBER_ME_CHECK_BOX);
+    }
+    public WebElement getClickOnHelpLinkButton() {
+        return waitUntilElementToBeClickable(HELP_I_CANT_SIGN_IN_LINK_BUTTON);
     }
 }

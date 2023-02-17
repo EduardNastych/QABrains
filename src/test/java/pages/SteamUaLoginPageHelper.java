@@ -37,6 +37,10 @@ public class SteamUaLoginPageHelper extends SteamUaLoginPageElements {
         moveCursor(getRememberMeCheckBox());
         return this;
     }
+    public SteamUaLoginPageHelper clickOnHelpLinkButton() {
+        getClickOnHelpLinkButton().click();
+        return this;
+    }
 
     private String loginColor;
 
