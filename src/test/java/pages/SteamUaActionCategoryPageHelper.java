@@ -12,5 +12,4 @@ public class SteamUaActionCategoryPageHelper extends SteamUaActionCategoryPageEl
         getActionAdventureCategory().click();
         return this;
     }
-
 }

@@ -44,7 +44,4 @@ public class Constants {
     public final static String HELP_I_CANT_SIGN_IN_LINK_BUTTON = "//a[contains(text(),'Help, I can')]";
     public final static String STEAM_MOBILE_APP_LINK_BUTTON = "//a[contains(text(),'Steam Mobile App')]";
     public final static String POP_UP_NOTIFICATION = "//div[contains(text(), 'Під час наступного запуску Steam вам не потрібно буде вводити пароль чи підтверджувати вхід до акаунта.')]";
-
-
-
 }

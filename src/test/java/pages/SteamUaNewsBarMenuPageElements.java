@@ -11,8 +11,13 @@ public class SteamUaNewsBarMenuPageElements extends AbstractBasePage {
 
     private final static String INPUT_FIELD_FOR_SEARCH = "//input[contains(@class, 'DialogInput')]";
 
-    public WebElement getInputFieldForSearch() { return waitUntilElementToBeClickable(INPUT_FIELD_FOR_SEARCH);}
+    public WebElement getInputFieldForSearch() {
+        return waitUntilElementToBeClickable(INPUT_FIELD_FOR_SEARCH);
+    }
 
     private final static String BUTTON_NEWS_BAR_MENU = "(//a[@class='tab  '])[2]";
-    public WebElement getNewsBarMenu() { return waitUntilElementToBeClickable(BUTTON_NEWS_BAR_MENU);}
+
+    public WebElement getNewsBarMenu() {
+        return waitUntilElementToBeClickable(BUTTON_NEWS_BAR_MENU);
+    }
 }

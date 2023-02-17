@@ -8,12 +8,9 @@ import pages.SteamUaRegistrationPageHelper;
 
 public class SteamNegativeIAgreeCheckMarkRegistrationTest extends AbstractBaseTest {
     @Test
-    public void negativeIAgreeCheckMarkRegistrationTest(){
-        SteamUaHomePageHelper steamUaHomePageHelper=new SteamUaHomePageHelper(driver);
-        SteamUaRegistrationPageHelper steamUaRegistrationPageHelper=new SteamUaRegistrationPageHelper(driver);
-
-
-
+    public void negativeIAgreeCheckMarkRegistrationTest() {
+        SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
+        SteamUaRegistrationPageHelper steamUaRegistrationPageHelper = new SteamUaRegistrationPageHelper(driver);
 
         openUrl("https://store.steampowered.com/");
         steamUaHomePageHelper.openLoginWindow();
@@ -23,9 +20,6 @@ public class SteamNegativeIAgreeCheckMarkRegistrationTest extends AbstractBaseTe
         steamUaRegistrationPageHelper.clickOnIAgreeCheckMark();
         steamUaRegistrationPageHelper.clickOnContinueButton();
 
-
-
         Assert.assertTrue(steamUaRegistrationPageHelper.getErrorDisplay().isDisplayed(), "Error display is visible");
-
     }
 }

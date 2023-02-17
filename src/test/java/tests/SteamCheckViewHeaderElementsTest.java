@@ -10,7 +10,7 @@ import static utils.Constants.*;
 
 public class SteamCheckViewHeaderElementsTest extends AbstractBaseTest {
     @Test
-    public void checkViewHeaderElementsTest(){
+    public void checkViewHeaderElementsTest() {
         SteamUaViewHelper steamUaViewHelper = new SteamUaViewHelper(driver);
         openUrl("https://store.steampowered.com/");
 

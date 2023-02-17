@@ -28,7 +28,5 @@ public class SteamCheckViewBottomElementsTest extends AbstractBaseTest {
         Assert.assertTrue(GIFT_CARD_LINK_BUTTON, true);
         Assert.assertTrue(FACEBOOK_LINK_BUTTON, true);
         Assert.assertTrue(TWITTER_LINK_BUTTON, true);
-
-
     }
 }

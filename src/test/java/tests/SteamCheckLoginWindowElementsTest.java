@@ -24,6 +24,5 @@ public class SteamCheckLoginWindowElementsTest extends AbstractBaseTest {
         Assert.assertTrue(true, LOGIN_BUTTON);
         Assert.assertTrue(true, HELP_I_CANT_SIGN_IN_LINK_BUTTON);
         Assert.assertTrue(true, STEAM_MOBILE_APP_LINK_BUTTON);
-
     }
 }

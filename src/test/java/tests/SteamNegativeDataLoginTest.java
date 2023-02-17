@@ -5,10 +5,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
-import utils.DataProviderSteamNegativeDataTest;
+import utils.DataProviderSteamNegativeData;
 
 public class SteamNegativeDataLoginTest extends AbstractBaseTest {
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeDataTest.class)
+    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeData.class)
     public void negativeLoginTestWithInvalidLogin(String username, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

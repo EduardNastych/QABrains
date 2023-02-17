@@ -8,11 +8,9 @@ import pages.SteamUaRegistrationPageHelper;
 
 public class SteamNegativeConfirmEmailRegistrationTest extends AbstractBaseTest {
     @Test
-    public void negativeConfirmEmailRegistrationTest(){
-        SteamUaHomePageHelper steamUaHomePageHelper=new SteamUaHomePageHelper(driver);
-        SteamUaRegistrationPageHelper steamUaRegistrationPageHelper=new SteamUaRegistrationPageHelper(driver);
-
-
+    public void negativeConfirmEmailRegistrationTest() {
+        SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
+        SteamUaRegistrationPageHelper steamUaRegistrationPageHelper = new SteamUaRegistrationPageHelper(driver);
 
         openUrl("https://store.steampowered.com/");
         steamUaHomePageHelper.openLoginWindow();
@@ -20,7 +18,6 @@ public class SteamNegativeConfirmEmailRegistrationTest extends AbstractBaseTest 
         steamUaRegistrationPageHelper.writeValidEmail();
         steamUaRegistrationPageHelper.writeValidEmailInReenter();
         steamUaRegistrationPageHelper.clickOnContinueButton();
-
 
         Assert.assertTrue(steamUaRegistrationPageHelper.getErrorDisplay().isDisplayed(), "Error display is visible");
     }

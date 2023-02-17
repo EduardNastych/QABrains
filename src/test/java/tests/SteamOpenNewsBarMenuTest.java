@@ -17,9 +17,6 @@ public class SteamOpenNewsBarMenuTest extends AbstractBaseTest {
         //steamUaNewsBarMenuPageHelper.clickOnInputFieldForSearch();
         steamUaNewsBarMenuPageHelper.writeOnInputFieldForSearch();
 
-       // Assertions.assertThat(getUrl()).isEqualTo("https://store.steampowered.com/news/");
-
-
+        // Assertions.assertThat(getUrl()).isEqualTo("https://store.steampowered.com/news/");
     }
-
 }
