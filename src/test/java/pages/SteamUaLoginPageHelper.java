@@ -41,6 +41,10 @@ public class SteamUaLoginPageHelper extends SteamUaLoginPageElements {
         getClickOnHelpLinkButton().click();
         return this;
     }
+    public SteamUaLoginPageHelper clickOnSteamMobileAppLinkButton() {
+        getClickOnSteamMobileAppLinkButton().click();
+        return this;
+    }
 
     private String loginColor;
 
