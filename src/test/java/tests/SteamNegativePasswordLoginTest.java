@@ -11,7 +11,7 @@ import static utils.Constants.LOGIN_INPUTS_BORDER_LINE_COLOR;
 import static utils.Constants.STEAM_URL;
 
 public class SteamNegativePasswordLoginTest extends AbstractBaseTest {
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativePasswordLogin.class)
+    @Test(priority = 4, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativePasswordLogin.class)
     public void negativeLoginTestWithInvalidLogin(String username, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

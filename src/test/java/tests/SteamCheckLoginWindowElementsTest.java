@@ -9,7 +9,7 @@ import pages.SteamUaLoginPageHelper;
 import static utils.Constants.*;
 
 public class SteamCheckLoginWindowElementsTest extends AbstractBaseTest {
-    @Test
+    @Test(priority = 8)
     public void checkLoginWindowElementsTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

@@ -10,7 +10,7 @@ import utils.data_providers.DataProviderSteamNegativeData;
 import static utils.Constants.STEAM_URL;
 
 public class SteamNegativeDataLoginTest extends AbstractBaseTest {
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeData.class)
+    @Test(priority = 5, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeData.class)
     public void negativeLoginTestWithInvalidLogin(String username, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

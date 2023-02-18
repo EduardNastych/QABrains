@@ -9,9 +9,9 @@ import pages.SteamUaMobilePageHelper;
 
 import static utils.Constants.*;
 
-public class SteamDoNotOpenAppStoreSteamPageTest extends AbstractBaseTest {
-    @Test
-    public void doNotOpenAppStoreSteamPageTest(){
+public class SteamDoNotSwitchPageToAppStoreSteamPageTest extends AbstractBaseTest {
+    @Test(priority = 1)
+    public void doNotSwitchPageToAppStoreSteamPageTest(){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
         SteamUaMobilePageHelper steamUaMobilePageHelper = new SteamUaMobilePageHelper(driver);
@@ -21,6 +21,6 @@ public class SteamDoNotOpenAppStoreSteamPageTest extends AbstractBaseTest {
         steamUaLoginPageHelper.clickOnSteamMobileAppLinkButton();
         steamUaMobilePageHelper.clickOnAppStoreLogo();
 
-        Assertions.assertThat(getUrl()).isEqualTo(MOBILE_STEAM_PAGE_STEAM_PAGE_URL);
+        Assertions.assertThat(getUrl()).isEqualTo(LOGIN_PAGE_URL);
     }
 }

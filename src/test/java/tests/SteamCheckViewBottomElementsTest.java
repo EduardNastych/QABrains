@@ -8,7 +8,7 @@ import pages.SteamUaViewHelper;
 import static utils.Constants.*;
 
 public class SteamCheckViewBottomElementsTest extends AbstractBaseTest {
-    @Test
+    @Test(priority = 7)
     public void checkViewBottomElementsTest() {
         SteamUaViewHelper steamUaViewHelper = new SteamUaViewHelper(driver);
         openUrl(STEAM_URL);

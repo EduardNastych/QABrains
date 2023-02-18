@@ -9,7 +9,7 @@ import pages.SteamUaViewHelper;
 import static utils.Constants.*;
 
 public class SteamCheckViewHeaderElementsTest extends AbstractBaseTest {
-    @Test
+    @Test(priority = 6)
     public void checkViewHeaderElementsTest() {
         SteamUaViewHelper steamUaViewHelper = new SteamUaViewHelper(driver);
         openUrl(STEAM_URL);

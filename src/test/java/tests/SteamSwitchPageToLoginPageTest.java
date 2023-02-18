@@ -9,9 +9,9 @@ import pages.SteamUaMobilePageHelper;
 
 import static utils.Constants.*;
 
-public class SteamAddAPhoneNumberToYourSteamAccountTest extends AbstractBaseTest {
+public class SteamSwitchPageToLoginPageTest extends AbstractBaseTest {
     @Test
-    public void addAPhoneNumberToYourSteamAccountTest(){
+    public void switchPageToLoginPageTest(){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
         SteamUaMobilePageHelper steamUaMobilePageHelper = new SteamUaMobilePageHelper(driver);

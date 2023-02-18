@@ -11,7 +11,7 @@ import static utils.Constants.ERROR_MESSAGE_COLOR;
 import static utils.Constants.STEAM_URL;
 
 public class SteamNegativeUsernameLoginTest extends AbstractBaseTest {
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeUsernameLogin.class)
+    @Test(priority = 3, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeUsernameLogin.class)
     public void negativeLoginTestWithInvalidLogin(String username, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

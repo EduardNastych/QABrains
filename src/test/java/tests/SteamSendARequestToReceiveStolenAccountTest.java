@@ -10,7 +10,7 @@ import utils.data_providers.DataProviderSteamValidEmail;
 import static utils.Constants.*;
 
 public class SteamSendARequestToReceiveStolenAccountTest extends AbstractBaseTest {
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamValidEmail.class)
+    @Test(priority = 10, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamValidEmail.class)
     public void sendARequestToReceiveStolenAccountTest(String email){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

@@ -12,7 +12,7 @@ import static utils.Constants.STEAM_URL;
 
 public class SteamNegativeEmailLoginTest extends AbstractBaseTest {
 
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeEmailLogin.class)
+    @Test(priority = 2, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamNegativeEmailLogin.class)
     public void negativeEmailLoginTest(String mail, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

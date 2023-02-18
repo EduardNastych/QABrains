@@ -9,7 +9,7 @@ import pages.*;
 import static utils.Constants.*;
 
 public class SteamSendARequestToReceiveMobileAuthenticatorTest extends AbstractBaseTest {
-    @Test
+    @Test(priority = 12)
     public void sendARequestToReceiveMobileAuthenticatorTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

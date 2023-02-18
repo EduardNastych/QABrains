@@ -11,7 +11,7 @@ import static utils.Constants.NOT_RECEIVE_CODE_PAGE_URL;
 import static utils.Constants.STEAM_URL;
 
 public class SteamSendARequestToReceiveSteamGuardCodeTest extends AbstractBaseTest {
-    @Test
+    @Test(priority = 11)
     public void sendARequestToReceiveSteamGuardCodeTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

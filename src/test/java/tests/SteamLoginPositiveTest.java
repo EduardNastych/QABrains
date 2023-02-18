@@ -11,7 +11,7 @@ import static utils.Constants.AUTHORIZATION_PAGE_URL;
 import static utils.Constants.STEAM_URL;
 
 public class SteamLoginPositiveTest extends AbstractBaseTest {
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamPositiveData.class)
+    @Test(priority = 1, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamPositiveData.class)
     public void positiveLoginTest(String username, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);

@@ -14,7 +14,7 @@ import static utils.Constants.FORGOT_LOGIN_DATA_PAGE_URL;
 import static utils.Constants.STEAM_URL;
 
 public class SteamSendARequestToReceiveLoginDataTest extends AbstractBaseTest {
-    @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamValidEmail.class)
+    @Test(priority = 9, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamValidEmail.class)
     public void sendARequestToReceiveLoginDataTest(String email){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
