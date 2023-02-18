@@ -8,9 +8,10 @@ import pages.SteamUaHelpWithLoginInfoPageHelper;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
 import pages.SteamUaSupportPageHelper;
-import utils.DataProviderSteamValidEmail;
+import utils.data_providers.DataProviderSteamValidEmail;
 
 import static utils.Constants.FORGOT_LOGIN_DATA_PAGE_URL;
+import static utils.Constants.STEAM_URL;
 
 public class SteamSendARequestToReceiveLoginDataTest extends AbstractBaseTest {
     @Test(dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamValidEmail.class)
@@ -20,7 +21,7 @@ public class SteamSendARequestToReceiveLoginDataTest extends AbstractBaseTest {
         SteamUaSupportPageHelper steamUaSupportPageHelper = new SteamUaSupportPageHelper(driver);
         SteamUaHelpWithLoginInfoPageHelper steamUaHelpWithLoginInfoPageHelper = new SteamUaHelpWithLoginInfoPageHelper(driver);
 
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaHomePageHelper.openLoginWindow();
         steamUaLoginPageHelper.clickOnHelpLinkButton();
         steamUaSupportPageHelper.clickOnForgotLoginDataLinkButton();

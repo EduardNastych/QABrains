@@ -5,7 +5,7 @@ import org.assertj.core.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
-import utils.DataProviderSteamValidEmail;
+import utils.data_providers.DataProviderSteamValidEmail;
 
 import static utils.Constants.*;
 
@@ -18,7 +18,7 @@ public class SteamSendARequestToReceiveStolenAccountTest extends AbstractBaseTes
         SteamUaHelpWithAccountStolenPageHelper steamUaHelpWithAccountStolenPageHelper = new SteamUaHelpWithAccountStolenPageHelper(driver);
         SteamUaHelpWithLoginInfoPageHelper steamUaHelpWithLoginInfoPageHelper = new SteamUaHelpWithLoginInfoPageHelper(driver);
 
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaHomePageHelper.openLoginWindow();
         steamUaLoginPageHelper.clickOnHelpLinkButton();
         steamUaSupportPageHelper.clickOnStolenAccountLinkButton();
@@ -28,6 +28,6 @@ public class SteamSendARequestToReceiveStolenAccountTest extends AbstractBaseTes
         steamUaHelpWithLoginInfoPageHelper.setCaptchaColor();
 
         Assertions.assertThat(getUrl()).isEqualTo(RECEIVE_STOLEN_ACCOUNT_PAGE_URL);
-        Assert.assertEquals(CAPTCHA_ERROR_MESSAGE_BORDER_LINE_COLOR, steamUaHelpWithLoginInfoPageHelper.getCaptchaColor());
+        Assert.assertEquals(HELP_ERROR_MESSAGE_BORDER_LINE_COLOR, steamUaHelpWithLoginInfoPageHelper.getCaptchaColor());
     }
 }

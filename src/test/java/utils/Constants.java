@@ -1,9 +1,20 @@
 package utils;
 
 public class Constants {
+    public final static String STEAM_URL = "https://store.steampowered.com/";
+    //DataProvider
+    public static final String VALID_USERNAME = "anyashyta";
+    public static final String VALID_EMAIL = "ed27nast@gmail.com";
+    public static final String VALID_PASSWORD = "eduard27072002";
+    public static final String INVALID_USERNAME = "eduardnastych";
+    public static final String INVALID_PASSWORD = "anya10102002";
+
+    //Login Tests
     public static final String LOGIN_INPUTS_BORDER_LINE_COLOR = "rgb(193, 87, 85)";
     public static final String ERROR_MESSAGE_COLOR = "rgb(193, 87, 85)";
     public static final String AUTHORIZATION_PAGE_URL = "https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header";
+
+    //CheckPresenceOfElements Test
     public static final String STEAM_ICON = "//img[@src='https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016']";
     public static final String STORE_MENU_ITEM = "(//a[contains(text(),'Крамниця')])[1]";
     public static final String HOME_SUBMENU_ITEM = "(//a[contains(text(),'Домівка')])[1]";
@@ -44,14 +55,13 @@ public class Constants {
     public final static String HELP_I_CANT_SIGN_IN_LINK_BUTTON = "//a[contains(text(),'Help, I can')]";
     public final static String STEAM_MOBILE_APP_LINK_BUTTON = "//a[contains(text(),'Steam Mobile App')]";
     public final static String POP_UP_NOTIFICATION = "//div[contains(text(), 'Під час наступного запуску Steam вам не потрібно буде вводити пароль чи підтверджувати вхід до акаунта.')]";
+
+    //SupportPage Tests
     public final static String FORGOT_LOGIN_DATA_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?issueid=406";
-    public final static String CAPTCHA_ERROR_MESSAGE_BORDER_LINE_COLOR = "rgb(129, 0, 0)";
     public final static String RECEIVE_STOLEN_ACCOUNT_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?reset=1&issueid=408";
     public final static String NOT_RECEIVE_CODE_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?reset=2&issueid=409";
-    public final static String HELP_ERROR_MESSAGE_BORDER_LINE_COLOR = "rgb(129, 0, 0)";
     public final static String LOST_AUTHENTICATOR_PAGE_URL = "https://help.steampowered.com/uk/wizard/HelpWithLoginInfo?lost=8&issueid=402";
     public final static String MOBILE_STEAM_PAGE_STEAM_PAGE_URL = "https://store.steampowered.com/mobile";
     public final static String ADD_NUMBER_URl = "https://store.steampowered.com/login/?redir=phone%2Fmanage&redir_ssl=1";
-
-
+    public final static String HELP_ERROR_MESSAGE_BORDER_LINE_COLOR = "rgb(129, 0, 0)";
 }

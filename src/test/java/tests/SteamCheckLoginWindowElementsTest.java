@@ -13,7 +13,7 @@ public class SteamCheckLoginWindowElementsTest extends AbstractBaseTest {
     public void checkLoginWindowElementsTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaHomePageHelper.openLoginWindow();
 
         Assert.assertTrue(true, LOGIN_INPUT);

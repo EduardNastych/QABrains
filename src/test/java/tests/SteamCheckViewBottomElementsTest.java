@@ -11,7 +11,7 @@ public class SteamCheckViewBottomElementsTest extends AbstractBaseTest {
     @Test
     public void checkViewBottomElementsTest() {
         SteamUaViewHelper steamUaViewHelper = new SteamUaViewHelper(driver);
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         scrollToElement(steamUaViewHelper.getValveLogoIcon());
 
         Assert.assertTrue(VALVE_LOGO_ICON, true);

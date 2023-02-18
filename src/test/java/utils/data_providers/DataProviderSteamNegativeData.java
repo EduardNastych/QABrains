@@ -1,14 +1,13 @@
-package utils;
+package utils.data_providers;
 
 import org.testng.annotations.DataProvider;
+import static utils.Constants.*;
 
-public class DataProviderSteamValidEmail {
-    private final static String EMAIL = "ed27nast@gmail.com";
-
+public class DataProviderSteamNegativeData {
     @DataProvider
     public static Object[][] randomUserDataLogin() {
         return new Object[][]{
-                {EMAIL}
+                {INVALID_USERNAME, INVALID_PASSWORD}
         };
     }
 }

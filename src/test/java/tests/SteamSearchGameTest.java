@@ -10,6 +10,7 @@ import pages.SteamUaNewsBarMenuPageHelper;
 import pages.SteamUaSearchGameHelper;
 
 import static utils.Constants.RECEIVE_STOLEN_ACCOUNT_PAGE_URL;
+import static utils.Constants.STEAM_URL;
 
 public class SteamSearchGameTest extends AbstractBaseTest {
 
@@ -19,7 +20,7 @@ public class SteamSearchGameTest extends AbstractBaseTest {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaSearchGameHelper steamUaSearchGameHelper = new SteamUaSearchGameHelper(driver);
 
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaSearchGameHelper.writeNameOfGame();
         steamUaSearchGameHelper.clickOnSearchButtonOfGame();
 

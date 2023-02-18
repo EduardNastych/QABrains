@@ -6,13 +6,15 @@ import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaRegistrationPageHelper;
 
+import static utils.Constants.STEAM_URL;
+
 public class SteamNegativeConfirmEmailRegistrationTest extends AbstractBaseTest {
     @Test
     public void negativeConfirmEmailRegistrationTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaRegistrationPageHelper steamUaRegistrationPageHelper = new SteamUaRegistrationPageHelper(driver);
 
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaHomePageHelper.openLoginWindow();
         steamUaRegistrationPageHelper.clickOnJoinToSteamButton();
         steamUaRegistrationPageHelper.writeValidEmail();

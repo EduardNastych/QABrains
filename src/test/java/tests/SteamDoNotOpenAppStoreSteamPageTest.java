@@ -16,7 +16,7 @@ public class SteamDoNotOpenAppStoreSteamPageTest extends AbstractBaseTest {
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
         SteamUaMobilePageHelper steamUaMobilePageHelper = new SteamUaMobilePageHelper(driver);
 
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaHomePageHelper.openLoginWindow();
         steamUaLoginPageHelper.clickOnSteamMobileAppLinkButton();
         steamUaMobilePageHelper.clickOnAppStoreLogo();

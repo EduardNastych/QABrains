@@ -12,7 +12,7 @@ public class SteamCheckViewHeaderElementsTest extends AbstractBaseTest {
     @Test
     public void checkViewHeaderElementsTest() {
         SteamUaViewHelper steamUaViewHelper = new SteamUaViewHelper(driver);
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
 
         Assert.assertTrue(STEAM_ICON, true);
 

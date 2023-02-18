@@ -16,7 +16,7 @@ public class SteamSendARequestToReceiveMobileAuthenticatorTest extends AbstractB
         SteamUaSupportPageHelper steamUaSupportPageHelper = new SteamUaSupportPageHelper(driver);
         SteamUaHelpWithLoginInfoPageHelper steamUaHelpWithLoginInfoPageHelper = new SteamUaHelpWithLoginInfoPageHelper(driver);
 
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaHomePageHelper.openLoginWindow();
         steamUaLoginPageHelper.clickOnHelpLinkButton();
         steamUaSupportPageHelper.clickOnLostAuthenticatorDataLinkButton();

@@ -1,15 +1,13 @@
-package utils;
+package utils.data_providers;
 
 import org.testng.annotations.DataProvider;
+import static utils.Constants.*;
 
 public class DataProviderSteamNegativeUsernameLogin {
-    private final static String USERNAME = "eduardnastych";
-    private final static String PASSWORD = "eduard27072002";
-
     @DataProvider
     public static Object[][] randomUserDataLogin() {
         return new Object[][]{
-                {USERNAME, PASSWORD}
+                {INVALID_USERNAME, VALID_PASSWORD}
         };
     }
 }
