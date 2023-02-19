@@ -1,10 +1,7 @@
 package base;
 
 import lombok.extern.slf4j.Slf4j;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -110,5 +107,26 @@ abstract public class AbstractBasePage extends AbstractBase {
 
     protected void doubleClick(WebElement element) {
         actions.doubleClick(element).build().perform();
+    }
+
+    public boolean waitUntilTextToBe(WebElement element, String text) {
+        try {
+            return wait.until(ExpectedConditions.textToBePresentInElement(element, text));
+        } catch (TimeoutException e) {
+            log.error("Text not to be: " + text);
+            fail("Text not to be: " + text);
+
+
+            return false;
+        }
+    }
+    public void waitUntilInvisibilityOfElement(WebElement element) {
+        try {
+            wait.until(ExpectedConditions.invisibilityOf(element));
+        } catch (WebDriverException e) {
+            log.error("Element visibility: " );
+            fail("Element no visibility: " );
+
+        }
     }
 }

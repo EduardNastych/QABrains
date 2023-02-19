@@ -23,4 +23,22 @@ public class SteamUaHomePageHelper extends SteamUaHomePageElements {
         getClickNewsBarMenu().click();
         return this;
     }
+    public SteamUaHomePageHelper openLanguages() {
+        getOpenLanguageMenu().click();
+        return this;
+    }
+
+    public SteamUaHomePageHelper switchToGerman() {
+        getGermanLanguage().click();
+        return this;
+    }
+
+    public boolean newsButtonTextToBe(String text){
+
+        return waitUntilTextToBe( getGermanLanguage(),text);
+    }
+    public void waitUntilChangeLanguageFinish(){
+        waitUntilInvisibilityOfElement(changerLanguagePopUp());
+    }
+
 }
