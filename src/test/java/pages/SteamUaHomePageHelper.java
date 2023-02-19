@@ -18,4 +18,27 @@ public class SteamUaHomePageHelper extends SteamUaHomePageElements {
         return this;
     }
 
+    public SteamUaHomePageHelper moveCursorToNewsBarMenu() {
+        moveCursor(getMoveCursorToNewsBarMenu());
+        getClickNewsBarMenu().click();
+        return this;
+    }
+    public SteamUaHomePageHelper openLanguages() {
+        getOpenLanguageMenu().click();
+        return this;
+    }
+
+    public SteamUaHomePageHelper switchToGerman() {
+        getGermanLanguage().click();
+        return this;
+    }
+
+    public boolean newsButtonTextToBe(String text){
+
+        return waitUntilTextToBe( getGermanLanguage(),text);
+    }
+    public void waitUntilChangeLanguageFinish(){
+        waitUntilInvisibilityOfElement(changerLanguagePopUp());
+    }
+
 }
