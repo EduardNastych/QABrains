@@ -9,11 +9,11 @@ import pages.SteamUaLoginPageHelper;
 import static utils.Constants.*;
 
 public class SteamCheckLoginWindowElementsTest extends AbstractBaseTest {
-    @Test
+    @Test(priority = 8)
     public void checkLoginWindowElementsTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaHomePageHelper.openLoginWindow();
 
         Assert.assertTrue(true, LOGIN_INPUT);
@@ -24,6 +24,5 @@ public class SteamCheckLoginWindowElementsTest extends AbstractBaseTest {
         Assert.assertTrue(true, LOGIN_BUTTON);
         Assert.assertTrue(true, HELP_I_CANT_SIGN_IN_LINK_BUTTON);
         Assert.assertTrue(true, STEAM_MOBILE_APP_LINK_BUTTON);
-
     }
 }

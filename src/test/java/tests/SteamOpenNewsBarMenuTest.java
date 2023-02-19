@@ -3,10 +3,10 @@ package tests;
 import base.AbstractBaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.SteamUaHomePageHelper;
 import pages.SteamUaNewsAppPageHelper;
 import pages.SteamUaNewsBarMenuPageHelper;
 
+import static utils.Constants.STEAM_URL;
 
 public class SteamOpenNewsBarMenuTest extends AbstractBaseTest {
     @Test
@@ -16,7 +16,7 @@ public class SteamOpenNewsBarMenuTest extends AbstractBaseTest {
 
         String nameOfGame = "DayZ";
 
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         steamUaNewsBarMenuPageHelper.clickOnNewsBarMenu();
         steamUaNewsBarMenuPageHelper.writeOnInputFieldForSearch(nameOfGame);
         steamUaNewsBarMenuPageHelper.setGameName();
@@ -25,5 +25,4 @@ public class SteamOpenNewsBarMenuTest extends AbstractBaseTest {
         Assert.assertTrue(steamUaNewsAppPageHelper.getTextGameDayz(steamUaNewsBarMenuPageHelper.getGameName()).isDisplayed());
 
     }
-
 }

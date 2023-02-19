@@ -8,10 +8,10 @@ import pages.SteamUaViewHelper;
 import static utils.Constants.*;
 
 public class SteamCheckViewBottomElementsTest extends AbstractBaseTest {
-    @Test
+    @Test(priority = 7)
     public void checkViewBottomElementsTest() {
         SteamUaViewHelper steamUaViewHelper = new SteamUaViewHelper(driver);
-        openUrl("https://store.steampowered.com/");
+        openUrl(STEAM_URL);
         scrollToElement(steamUaViewHelper.getValveLogoIcon());
 
         Assert.assertTrue(VALVE_LOGO_ICON, true);
@@ -28,7 +28,5 @@ public class SteamCheckViewBottomElementsTest extends AbstractBaseTest {
         Assert.assertTrue(GIFT_CARD_LINK_BUTTON, true);
         Assert.assertTrue(FACEBOOK_LINK_BUTTON, true);
         Assert.assertTrue(TWITTER_LINK_BUTTON, true);
-
-
     }
 }

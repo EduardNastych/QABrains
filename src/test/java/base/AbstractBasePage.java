@@ -36,6 +36,15 @@ abstract public class AbstractBasePage extends AbstractBase {
             return null;
         }
     }
+    protected WebElement waitUntilPresenceOfElementLocated(String locator) {
+        try {
+            return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+        } catch (WebDriverException e) {
+            log.error("No visibility element: " + locator);
+            fail("No visibility element: " + locator);
+            return null;
+        }
+    }
 
     protected WebElement waitUntilElementToBeClickable(String locator) {
         try {
