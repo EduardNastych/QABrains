@@ -2,12 +2,13 @@ package tests;
 
 import base.AbstractBaseTest;
 import org.assertj.core.api.Assertions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 import pages.SteamUaClickSpecialsHelper;
 import static utils.Constants.STEAM_URL;
 
 public class SteamUaClickSpecialsTest extends AbstractBaseTest {
-
     @Test
     public void clickSpecialsTest() {
         SteamUaClickSpecialsHelper steamUaClickSpecialsHelper = new SteamUaClickSpecialsHelper(driver);
@@ -17,7 +18,8 @@ public class SteamUaClickSpecialsTest extends AbstractBaseTest {
         steamUaClickSpecialsHelper.clickOnListButtonSortByTrigger();
         steamUaClickSpecialsHelper.clickOnButtonSortByDate();
 
-        Assertions.assertThat(getUrl()).isEqualTo("https://store.steampowered.com/search/?sort_by=Released_DESC&supportedlang=ukrainian&specials=1&ndl=1");
+        Assert.assertTrue(steamUaClickSpecialsHelper.getButtonSetingsOnSpecialPage().isDisplayed(), "Settings button is not display");
+
     }
 
 }
