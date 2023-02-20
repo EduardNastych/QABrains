@@ -1,6 +1,7 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.assertj.core.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,6 +12,7 @@ import utils.DataProviderCredentials;
 import static utils.Constants.*;
 
 public class SteamSendARequestToReceiveStolenAccountTest extends AbstractBaseTest {
+    @Owner(EDUARD)
     @Test(priority = 10, dataProvider = "positiveUserEmail", dataProviderClass = DataProviderCredentials.class)
     public void sendARequestToReceiveStolenAccountTest(String email){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);

@@ -1,14 +1,17 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.SteamUaActionCategoryPageHelper;
 import pages.SteamUaHomePageHelper;
 
+import static utils.Constants.KOLYA;
 import static utils.Constants.STEAM_URL;
 
 public class SteamOpenCategoryActionTest extends AbstractBaseTest {
+    @Owner(KOLYA)
     @Test
     public void openActionCategoryTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);

@@ -1,11 +1,15 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 
+import static utils.Constants.MAKS;
+
 public class SteamLanguageGermanPositiveTest extends AbstractBaseTest {
+    @Owner(MAKS)
     @Test
     public void positiveLanguageTest(){ SteamUaHomePageHelper steamUaHomePageHelper=new SteamUaHomePageHelper(driver);
 

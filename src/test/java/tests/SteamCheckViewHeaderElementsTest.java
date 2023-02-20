@@ -1,6 +1,7 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
@@ -9,6 +10,7 @@ import pages.SteamUaViewHelper;
 import static utils.Constants.*;
 
 public class SteamCheckViewHeaderElementsTest extends AbstractBaseTest {
+    @Owner(EDUARD)
     @Test(priority = 6)
     public void checkViewHeaderElementsTest() {
         SteamUaViewHelper steamUaViewHelper = new SteamUaViewHelper(driver);

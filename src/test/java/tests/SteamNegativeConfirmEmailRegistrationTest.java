@@ -1,14 +1,17 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaRegistrationPageHelper;
 
+import static utils.Constants.MAKS;
 import static utils.Constants.STEAM_URL;
 
 public class SteamNegativeConfirmEmailRegistrationTest extends AbstractBaseTest {
+    @Owner(MAKS)
     @Test
     public void negativeConfirmEmailRegistrationTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);

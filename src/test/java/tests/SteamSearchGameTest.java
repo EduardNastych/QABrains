@@ -2,6 +2,7 @@ package tests;
 
 import base.AbstractBasePage;
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.assertj.core.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,11 +10,10 @@ import pages.SteamUaHomePageHelper;
 import pages.SteamUaNewsBarMenuPageHelper;
 import pages.SteamUaSearchGameHelper;
 
-import static utils.Constants.RECEIVE_STOLEN_ACCOUNT_PAGE_URL;
-import static utils.Constants.STEAM_URL;
+import static utils.Constants.*;
 
 public class SteamSearchGameTest extends AbstractBaseTest {
-
+    @Owner(KOLYA)
     @Test
     public void searchGameInInputField() {
 

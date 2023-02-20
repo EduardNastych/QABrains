@@ -1,6 +1,7 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
@@ -9,6 +10,7 @@ import pages.SteamUaLoginPageHelper;
 import static utils.Constants.*;
 
 public class SteamCheckLoginWindowElementsTest extends AbstractBaseTest {
+    @Owner(EDUARD)
     @Test(priority = 8)
     public void checkLoginWindowElementsTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);

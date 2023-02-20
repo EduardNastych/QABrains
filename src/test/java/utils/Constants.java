@@ -4,6 +4,11 @@ public class Constants {
 
     public final static String STEAM_URL = "https://store.steampowered.com/";
 
+    //Owners
+    public static final String EDUARD = "Eduard";
+    public static final String MAKS = "Eduard";
+    public static final String KOLYA = "Eduard";
+
     //DataProvider
     public static final String VALID_USERNAME = "anyashyta";
     public static final String VALID_EMAIL = "ed27nast@gmail.com";

@@ -1,17 +1,17 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
 import utils.DataProviderCredentials;
 
-import static utils.Constants.LOGIN_INPUTS_BORDER_LINE_COLOR;
-import static utils.Constants.STEAM_URL;
+import static utils.Constants.*;
 
 public class SteamNegativeEmailLoginTest extends AbstractBaseTest {
-
+    @Owner(EDUARD)
     @Test(priority = 2, dataProvider = "negativeUserEmail", dataProviderClass = DataProviderCredentials.class)
     public void negativeEmailLoginTest(String mail, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);

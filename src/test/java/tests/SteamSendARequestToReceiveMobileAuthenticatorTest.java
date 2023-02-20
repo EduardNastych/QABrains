@@ -1,6 +1,7 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.assertj.core.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,6 +10,7 @@ import pages.*;
 import static utils.Constants.*;
 
 public class SteamSendARequestToReceiveMobileAuthenticatorTest extends AbstractBaseTest {
+    @Owner(KOLYA)
     @Test(priority = 12)
     public void sendARequestToReceiveMobileAuthenticatorTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);

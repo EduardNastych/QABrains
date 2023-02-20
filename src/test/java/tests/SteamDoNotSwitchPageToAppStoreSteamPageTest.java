@@ -1,6 +1,7 @@
 package tests;
 
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
@@ -10,6 +11,7 @@ import pages.SteamUaMobilePageHelper;
 import static utils.Constants.*;
 
 public class SteamDoNotSwitchPageToAppStoreSteamPageTest extends AbstractBaseTest {
+    @Owner(EDUARD)
     @Test(priority = 1)
     public void doNotSwitchPageToAppStoreSteamPageTest(){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);

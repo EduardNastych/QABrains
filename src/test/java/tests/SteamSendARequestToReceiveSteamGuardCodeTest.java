@@ -2,15 +2,16 @@ package tests;
 
 import base.AbstractBasePage;
 import base.AbstractBaseTest;
+import io.qameta.allure.Owner;
 import org.assertj.core.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 
-import static utils.Constants.NOT_RECEIVE_CODE_PAGE_URL;
-import static utils.Constants.STEAM_URL;
+import static utils.Constants.*;
 
 public class SteamSendARequestToReceiveSteamGuardCodeTest extends AbstractBaseTest {
+    @Owner(EDUARD)
     @Test(priority = 11)
     public void sendARequestToReceiveSteamGuardCodeTest() {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
