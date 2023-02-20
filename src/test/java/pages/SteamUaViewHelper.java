@@ -16,4 +16,8 @@ public class SteamUaViewHelper extends SteamUaViewElements {
         moveCursor(getStoreMenuItem());
         return this;
     }
+    public SteamUaViewHelper moveToValveLogo() {
+        moveCursor(getValveLogoIcon());
+        return this;
+    }
 }

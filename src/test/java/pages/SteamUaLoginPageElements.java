@@ -18,16 +18,17 @@ public class SteamUaLoginPageElements extends AbstractBasePage {
     private static final String REMEMBER_ME_CHECK_BOX = "//div[@class='newlogindialog_Checkbox_3tTFg']";
     private final static String HELP_I_CANT_SIGN_IN_LINK_BUTTON = "//a[text()='Я не можу ввійти']";
     private final static String STEAM_MOBILE_APP_LINK_BUTTON = "//a[contains(text(),'мобільний застосунок Steam')]";
+    private final static String POP_UP_NOTIFICATION = "//div[contains(text(), 'Під час наступного запуску Steam вам не потрібно буде вводити пароль чи підтверджувати вхід до акаунта.')]";
 
-    public WebElement getClickOnLoginInput() {
+    public WebElement getLoginInput() {
         return waitUntilElementToBeClickable(LOGIN_INPUT);
     }
 
-    public WebElement getClickOnPasswordInput() {
+    public WebElement getPasswordInput() {
         return waitUntilElementToBeClickable(PASSWORD_INPUT);
     }
 
-    public WebElement getClickOnLoginButton() {
+    public WebElement getLoginButton() {
         return waitUntilElementToBeClickable(LOGIN_BUTTON);
     }
 
@@ -45,11 +46,15 @@ public class SteamUaLoginPageElements extends AbstractBasePage {
     public WebElement getRememberMeCheckBox() {
         return waitUntilElementToBeClickable(REMEMBER_ME_CHECK_BOX);
     }
-    public WebElement getClickOnHelpLinkButton() {
+    public WebElement getHelpLinkButton() {
         return waitUntilElementToBeClickable(HELP_I_CANT_SIGN_IN_LINK_BUTTON);
     }
-    public WebElement getClickOnSteamMobileAppLinkButton() {
+    public WebElement getSteamMobileAppLinkButton() {
         return waitUntilElementToBeClickable(STEAM_MOBILE_APP_LINK_BUTTON);
     }
+    public WebElement getPopUpNotification() {
+        return waitUntilElementToBeClickable(POP_UP_NOTIFICATION);
+    }
+
 
 }

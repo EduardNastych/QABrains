@@ -8,13 +8,13 @@ import pages.SteamUaHelpWithLoginInfoPageHelper;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
 import pages.SteamUaSupportPageHelper;
-import utils.data_providers.DataProviderSteamValidEmail;
+import utils.DataProviderCredentials;
 
 import static utils.Constants.FORGOT_LOGIN_DATA_PAGE_URL;
 import static utils.Constants.STEAM_URL;
 
 public class SteamSendARequestToReceiveLoginDataTest extends AbstractBaseTest {
-    @Test(priority = 9, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamValidEmail.class)
+    @Test(priority = 9, dataProvider = "positiveUserEmail", dataProviderClass = DataProviderCredentials.class)
     public void sendARequestToReceiveLoginDataTest(String email){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
@@ -25,8 +25,9 @@ public class SteamSendARequestToReceiveLoginDataTest extends AbstractBaseTest {
         steamUaHomePageHelper.openLoginWindow();
         steamUaLoginPageHelper.clickOnHelpLinkButton();
         steamUaSupportPageHelper.clickOnForgotLoginDataLinkButton();
-        steamUaHelpWithLoginInfoPageHelper.writeValidEmail(email);
-        steamUaHelpWithLoginInfoPageHelper.clickOnSearchButton();
+        steamUaHelpWithLoginInfoPageHelper
+                .writeValidEmail(email)
+                .clickOnSearchButton();
 
         Assertions.assertThat(getUrl()).isEqualTo(FORGOT_LOGIN_DATA_PAGE_URL);
         Assert.assertTrue(steamUaHelpWithLoginInfoPageHelper.getCaptchaErrorMessage().isDisplayed());

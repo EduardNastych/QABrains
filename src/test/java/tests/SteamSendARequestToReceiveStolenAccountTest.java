@@ -5,12 +5,13 @@ import org.assertj.core.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
-import utils.data_providers.DataProviderSteamValidEmail;
+import utils.DataProviderCredentials;
+
 
 import static utils.Constants.*;
 
 public class SteamSendARequestToReceiveStolenAccountTest extends AbstractBaseTest {
-    @Test(priority = 10, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamValidEmail.class)
+    @Test(priority = 10, dataProvider = "positiveUserEmail", dataProviderClass = DataProviderCredentials.class)
     public void sendARequestToReceiveStolenAccountTest(String email){
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
@@ -23,9 +24,10 @@ public class SteamSendARequestToReceiveStolenAccountTest extends AbstractBaseTes
         steamUaLoginPageHelper.clickOnHelpLinkButton();
         steamUaSupportPageHelper.clickOnStolenAccountLinkButton();
         steamUaHelpWithAccountStolenPageHelper.ClickOnResetPasswordButton();
-        steamUaHelpWithLoginInfoPageHelper.writeValidEmail(email);
-        steamUaHelpWithLoginInfoPageHelper.clickOnSearchButton();
-        steamUaHelpWithLoginInfoPageHelper.setCaptchaColor();
+        steamUaHelpWithLoginInfoPageHelper
+                .writeValidEmail(email)
+                .clickOnSearchButton()
+                .setCaptchaColor();
 
         Assertions.assertThat(getUrl()).isEqualTo(RECEIVE_STOLEN_ACCOUNT_PAGE_URL);
         Assert.assertEquals(HELP_ERROR_MESSAGE_BORDER_LINE_COLOR, steamUaHelpWithLoginInfoPageHelper.getCaptchaColor());

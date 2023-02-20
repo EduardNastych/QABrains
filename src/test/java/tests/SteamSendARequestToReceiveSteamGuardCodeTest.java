@@ -24,8 +24,9 @@ public class SteamSendARequestToReceiveSteamGuardCodeTest extends AbstractBaseTe
         steamUaLoginPageHelper.clickOnHelpLinkButton();
         steamUaSupportPageHelper.clickOnNotReceivingCodeLinkButton();
         steamUaHelpWithSteamGuardCodePageHelper.clickOnVerifyAndUpdateEmailButton();
-        steamUaHelpWithLoginInfoPageHelper.clickOnSearchButton();
-        steamUaHelpWithLoginInfoPageHelper.setCaptchaColor();
+        steamUaHelpWithLoginInfoPageHelper
+                .clickOnSearchButton()
+                .setCaptchaColor();
 
         Assertions.assertThat(getUrl()).isEqualTo(NOT_RECEIVE_CODE_PAGE_URL);
         Assert.assertTrue(steamUaHelpWithLoginInfoPageHelper.getHelpErrorMessage().isDisplayed());

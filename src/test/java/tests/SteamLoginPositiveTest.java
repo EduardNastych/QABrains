@@ -5,21 +5,22 @@ import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.SteamUaHomePageHelper;
 import pages.SteamUaLoginPageHelper;
-import utils.data_providers.DataProviderSteamPositiveData;
+import utils.DataProviderCredentials;
 
 import static utils.Constants.AUTHORIZATION_PAGE_URL;
 import static utils.Constants.STEAM_URL;
 
 public class SteamLoginPositiveTest extends AbstractBaseTest {
-    @Test(priority = 1, dataProvider = "randomUserDataLogin", dataProviderClass = DataProviderSteamPositiveData.class)
+    @Test(priority = 1, dataProvider = "positiveUserData", dataProviderClass = DataProviderCredentials.class)
     public void positiveLoginTest(String username, String password) {
         SteamUaHomePageHelper steamUaHomePageHelper = new SteamUaHomePageHelper(driver);
         SteamUaLoginPageHelper steamUaLoginPageHelper = new SteamUaLoginPageHelper(driver);
 
         openUrl(STEAM_URL);
         steamUaHomePageHelper.openLoginWindow();
-        steamUaLoginPageHelper.makeLogin(username, password);
-        steamUaLoginPageHelper.clickOnLoginButton();
+        steamUaLoginPageHelper
+                .makeLogin(username, password)
+                .clickOnLoginButton();
 
         Assertions.assertThat(getUrl()).isEqualTo(AUTHORIZATION_PAGE_URL);
     }

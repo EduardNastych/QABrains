@@ -14,19 +14,19 @@ public class SteamCheckViewBottomElementsTest extends AbstractBaseTest {
         openUrl(STEAM_URL);
         scrollToElement(steamUaViewHelper.getValveLogoIcon());
 
-        Assert.assertTrue(VALVE_LOGO_ICON, true);
-        Assert.assertTrue(PRIVATE_POLICY_LINK_BUTTON, true);
-        Assert.assertTrue(LEGAL_LINK_BUTTON, true);
-        Assert.assertTrue(STEAM_SUBSCRIBER_AGREEMENT_LINK_BUTTON, true);
-        Assert.assertTrue(REFUSE_LINK_BUTTON, true);
-        Assert.assertTrue(COOKIES_LINK_BUTTON, true);
-        Assert.assertTrue(ABOUT_VALVE_LINK_BUTTON, true);
-        Assert.assertTrue(JOBS_LINK_BUTTON, true);
-        Assert.assertTrue(STEAMWORKS_LINK_BUTTON, true);
-        Assert.assertTrue(STEAM_DISTRIBUTION_LINK_BUTTON, true);
-        Assert.assertTrue(SUPPORT_LINK_BUTTON, true);
-        Assert.assertTrue(GIFT_CARD_LINK_BUTTON, true);
-        Assert.assertTrue(FACEBOOK_LINK_BUTTON, true);
-        Assert.assertTrue(TWITTER_LINK_BUTTON, true);
+        Assert.assertTrue(steamUaViewHelper.getValveLogoIcon().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getPrivatePolicyLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getLegalLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getSteamSubscriberAgreementLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getRefuceLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getCookiesLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getAboutValveLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getJobsLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getSteamWorksLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getSteamDistributionLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getSupportLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getGiftCardsLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getFacebookLinkButton().isDisplayed());
+        Assert.assertTrue(steamUaViewHelper.getTwitterLinkButton().isDisplayed());
     }
 }

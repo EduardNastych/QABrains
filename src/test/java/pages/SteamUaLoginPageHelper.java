@@ -8,28 +8,28 @@ public class SteamUaLoginPageHelper extends SteamUaLoginPageElements {
     }
 
     public SteamUaLoginPageHelper writeValidUsername() {
-        getClickOnLoginInput().sendKeys("anyashyta");
+        getLoginInput().sendKeys("anyashyta");
         return this;
     }
 
     public SteamUaLoginPageHelper writeValidEmail() {
-        getClickOnLoginInput().sendKeys("ed27nast@gmail.com");
+        getLoginInput().sendKeys("ed27nast@gmail.com");
         return this;
     }
 
     public SteamUaLoginPageHelper writeValidPassword() {
-        getClickOnPasswordInput().sendKeys("eduard27072002");
+        getPasswordInput().sendKeys("eduard27072002");
         return this;
     }
 
     public SteamUaLoginPageHelper clickOnLoginButton() {
-        getClickOnLoginButton().click();
+        getLoginButton().click();
         return this;
     }
 
     public SteamUaLoginPageHelper makeLogin(String username, String password) {
-        getClickOnLoginInput().sendKeys(username);
-        getClickOnPasswordInput().sendKeys(password);
+        getLoginInput().sendKeys(username);
+        getPasswordInput().sendKeys(password);
         return this;
     }
 
@@ -38,11 +38,11 @@ public class SteamUaLoginPageHelper extends SteamUaLoginPageElements {
         return this;
     }
     public SteamUaLoginPageHelper clickOnHelpLinkButton() {
-        getClickOnHelpLinkButton().click();
+        getHelpLinkButton().click();
         return this;
     }
     public SteamUaLoginPageHelper clickOnSteamMobileAppLinkButton() {
-        getClickOnSteamMobileAppLinkButton().click();
+        getSteamMobileAppLinkButton().click();
         return this;
     }
 

@@ -20,8 +20,9 @@ public class SteamSendARequestToReceiveMobileAuthenticatorTest extends AbstractB
         steamUaHomePageHelper.openLoginWindow();
         steamUaLoginPageHelper.clickOnHelpLinkButton();
         steamUaSupportPageHelper.clickOnLostAuthenticatorDataLinkButton();
-        steamUaHelpWithLoginInfoPageHelper.clickOnSearchButton();
-        steamUaHelpWithLoginInfoPageHelper.setMessageColor();
+        steamUaHelpWithLoginInfoPageHelper
+                .clickOnSearchButton()
+                .setMessageColor();
 
         Assertions.assertThat(getUrl()).isEqualTo(LOST_AUTHENTICATOR_PAGE_URL);
         Assert.assertEquals(HELP_ERROR_MESSAGE_BORDER_LINE_COLOR, steamUaHelpWithLoginInfoPageHelper.getMessageColor());
